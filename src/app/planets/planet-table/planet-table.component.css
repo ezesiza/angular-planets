@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+}
+
+.mat-cell {
+    padding: 8px 8px 8px 0;
+}
+
+.mat-row {
+    height: auto;
+}

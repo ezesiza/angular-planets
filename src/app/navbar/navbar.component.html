@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+    <span> My Planet List</span>
+    <span class="spacer"></span>
+    <button (click)="toggleDisplay()" mat-flat-button color="accent"><a routerLink="list" [hidden]="changeView">Change to
+            List View</a></button>
+    <button (click)="toggleDisplay()" mat-flat-button color="primary"><a routerLink="" [hidden]="!changeView">Change to
+            Table View</a></button>
+</mat-toolbar>

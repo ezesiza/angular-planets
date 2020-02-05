@@ -1,0 +1,24 @@
+<mat-spinner *ngIf="planetLoading">
+</mat-spinner>
+<mat-accordion *ngIf="planets.length>0 && !planetLoading">
+    <mat-expansion-panel *ngFor="let planet of planets">
+
+        <mat-expansion-panel-header>
+            <a [routerLink]="['/view', planet.url]" class="dark-grey-text">{{planet.name}} </a>
+
+        </mat-expansion-panel-header>
+
+        <mat-list>
+            <mat-list-item>Climate:{{planet.climate|titlecase}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Terrain: {{planet.terrain |titlecase}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Gravity: {{planet.gravity}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Population: {{planet.population}}</mat-list-item>
+        </mat-list>
+
+    </mat-expansion-panel>
+</mat-accordion>
+<mat-paginator [length]='totalPlanets' [pageSize]='planetsPerPage' [pageSizeOptions]='pageSizeOptions' (page)="onChangePage($event)" *ngIf="planets.length>0 "></mat-paginator>
+<p class="info-text mat-body-1" *ngIf="planets.length <=0 && !planetLoading">No Planets retrieved.</p>

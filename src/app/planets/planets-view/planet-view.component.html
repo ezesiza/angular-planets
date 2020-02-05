@@ -1,0 +1,82 @@
+<mat-spinner *ngIf="planetLoading"></mat-spinner>
+<button mat-button [routerLink]="['/']">
+    << Back to Table View</button> <button mat-button [routerLink]="['/list']">Back to List View >>
+</button>
+<mat-accordion>
+    <mat-expansion-panel>
+
+        <mat-expansion-panel-header>
+            <h4 class="mat-headline">{{planet.name}}</h4>
+
+        </mat-expansion-panel-header>
+
+        <mat-list>
+
+            <mat-toolbar color="basic">
+                <mat-list-item>Climate: {{planet.climate | titlecase}}</mat-list-item>
+            </mat-toolbar>
+            <mat-divider>
+
+            </mat-divider>
+            <mat-toolbar>
+                <mat-list-item>Terrain: {{planet.terrain | titlecase}}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>
+                    <div style="width: 500px;white-space: pre-line"> Residents: {{planet.residents}}</div>
+                    <br />
+                </mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Rotation Period: {{planet.rotation_period}}</mat-list-item>
+            </mat-toolbar>
+
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Orbital Period: {{planet.orbital_period}}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Diameter: {{planet.diameter}}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Films: {{planet.films }}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Population: {{planet.population}}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Created: {{planet.created | date}}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Edited: {{planet.edited | date}}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Url: {{planet.url}}</mat-list-item>
+            </mat-toolbar>
+
+            <mat-divider></mat-divider>
+            <mat-toolbar color="basic">
+                <mat-list-item>Surface Water: {{planet.surface_water}}</mat-list-item>
+            </mat-toolbar>
+        </mat-list>
+
+
+    </mat-expansion-panel>
+</mat-accordion>
